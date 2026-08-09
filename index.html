@@ -178,6 +178,15 @@ main{ background:var(--cream); padding:4.5rem 1.5rem 3rem; }
   width:100%; font-family:var(--sans); cursor:default; background:var(--beige-light);
 }
 
+/* admin access */
+.admin-access-wrap{ text-align:center; margin-top:2.75rem; }
+.admin-access-link{
+  display:inline-block; font-family:var(--sans); font-size:.62rem; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--text-muted); text-decoration:none;
+  border-bottom:1px dashed var(--gold-light); padding-bottom:.2rem; transition:color .25s,border-color .25s;
+}
+.admin-access-link:hover{ color:var(--gold-dark); border-color:var(--gold-dark); }
+
 /* footer */
 footer{ background:linear-gradient(135deg,var(--navy),var(--navy-dark)); text-align:center; padding:3.5rem 2rem 3rem; }
 .footer-names{ font-family:var(--script); font-size:clamp(2rem,5.5vw,3.1rem); color:var(--gold-light); margin-bottom:.4rem; }
@@ -263,8 +272,8 @@ footer{ background:linear-gradient(135deg,var(--navy),var(--navy-dark)); text-al
       </div>
 
       <!-- GALERÍA QR -->
-      <div class="card soon reveal on d3">
-        <span class="soon-tag">Próximamente</span>
+      <div class="card reveal on d3">
+        <span class="card-badge">Galería</span>
         <div class="card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect>
@@ -273,12 +282,25 @@ footer{ background:linear-gradient(135deg,var(--navy),var(--navy-dark)); text-al
           </svg>
         </div>
         <p class="card-name">Galería en vivo</p>
-        <p class="card-song">Escanea el QR el día del evento y sube tus fotos en tiempo real.</p>
+        <p class="card-song">Sube y mira las fotos del festejo en tiempo real.</p>
         <div class="card-actions">
-          <span class="btn-disabled">Aún no disponible</span>
+          <a class="btn-pill solid" href="https://arleth-fernanda.netlify.app/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            Ver galería
+          </a>
+          <button class="btn-pill" onclick="copyLink('https://arleth-fernanda.netlify.app/', this)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path></svg>
+            <span class="btn-label">Copiar link</span>
+          </button>
         </div>
       </div>
 
+    </div>
+
+    <div class="admin-access-wrap">
+      <a class="admin-access-link" href="https://arleth-fernanda.netlify.app/?admin=1" target="_blank" rel="noopener">
+        ✦ Acceso administradora (galería de fotos)
+      </a>
     </div>
   </div>
 </main>
